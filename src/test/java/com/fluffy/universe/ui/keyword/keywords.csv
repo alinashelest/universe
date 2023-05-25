@@ -1,0 +1,141 @@
+Test Case,Locator Type,Locator Value,Args
+--- LOGIN
+open_browser,chrome
+open_url,,,http://127.0.0.1:8080/
+click_at,linkText,Sign in,
+click_at,id,sign-in__email,
+enter_text,id,sign-in__email,alyashelya@gmail.com
+click_at,id,sign-in__password,
+enter_text,id,sign-in__password,fEhCJixR65FrTDe!
+click_at,css,.form__button,
+verify_existing,linkText,New post,
+close_browser
+-- POST
+open_browser,chrome
+open_url,,,http://127.0.0.1:8080/
+click_at,linkText,Sign in,
+click_at,id,sign-in__email,
+enter_text,id,sign-in__email,alyashelya+f@gmail.com
+click_at,id,sign-in__password,
+enter_text,id,sign-in__password,Test19test!
+click_at,css,.form__button,
+click_at,linkText,New post,
+click_at,css,.post-form__title,
+enter_text,css,.post-form__title,new post for the test
+click_at,css,.post-form__description,
+enter_text,css,.post-form__description,this post is for the test automation course in ssu
+click_at,xpath,/html/body/main/div/form/div[3]/button,
+click_at,css,.alert__button,
+verify_existing,xpath,/html/body/main/div/div/div/div/h2[text()='new post for the test'],
+close_browser
+--- COMMENT
+open_browser,chrome
+open_url,,,http://127.0.0.1:8080/
+click_at,linkText,Sign in,
+click_at,id,sign-in__email,
+enter_text,id,sign-in__email,alyashelya+f@gmail.com
+click_at,id,sign-in__password,
+enter_text,id,sign-in__password,Test19test!
+click_at,css,.form__button,
+click_at,linkText,New post,
+click_at,css,.post-form__title,
+enter_text,css,.post-form__title,new post for the test
+click_at,css,.post-form__description,
+enter_text,css,.post-form__description,this post is for the test automation course in ssu
+click_at,css,.post-form__button,
+click_at,linkText,Read more,
+click_at,css,.comment-form__textarea,
+enter_text,css,.comment-form__textarea,new comment for the test1
+click_at,css,.comment-form__button:nth-child(1)
+verify_existing,xpath,/html/body/main/div/div/div/div/p[text()='new comment for the test1']
+close_browser
+--- LOGOUT
+open_browser,chrome
+open_url,,,http://127.0.0.1:8080/
+click_at,linkText,Sign in,
+click_at,id,sign-in__email,
+enter_text,id,sign-in__email,alyashelya+f@gmail.com
+click_at,id,sign-in__password,
+enter_text,id,sign-in__password,Test19test!
+click_at,css,.form__button,
+click_at,css,.dropdown__icon,
+click_at,css,li:nth-child(3),
+verify_existing,linkText,Sign in,
+close_browser
+---- PROFILE 
+open_browser,chrome
+open_url,,,http://127.0.0.1:8080/
+click_at,linkText,Sign in,
+click_at,id,sign-in__email,
+enter_text,id,sign-in__email,alyashelya+f@gmail.com
+click_at,id,sign-in__password,
+enter_text,id,sign-in__password,Test19test!
+click_at,css,.form__button,
+click_at,css,.dropdown__icon,
+click_at,linkText,My profile,
+click_at,id,account__first-name,
+enter_text,id,account__first-name,Alina
+click_at,id,account__last-name,
+enter_text,id,account__last-name,Shelest
+driver.findElement(By.id("account__gender")).click();
+click_at,xpath,//option[. = 'Female'],
+click_at,id,account__birthday,
+enter_text,id,account__birthday,2001-02-26
+click_at,id,account__address,
+enter_text,id,account__address,street Sirka 37
+click_at,id,account__website,
+enter_text,id,account__website,https://alineriia
+click_at,css,.account-form,
+click_at,css,.button--fluid,
+verify_existing,css,.alert__button
+--- FAILED REGISTRATION
+open_browser,chrome
+open_url,,,http://127.0.0.1:8080/
+click_at,css,.hero__button,
+click_at,id,sign-up__first-name,
+enter_text,id,sign-up__first-name,Test
+click_at,id,sign-up__last-name,
+enter_text,id,sign-up__last-name,Testiuk
+click_at,id,sign-up__email,
+enter_text,id,sign-up__email,alyashelya+p@gmail.com
+click_at,css,.form__button,
+verify_existing,css,.form__feedback
+close_browser
+---- LOGIN WITH INCORECT PASS 
+open_browser,chrome
+open_url,,,http://127.0.0.1:8080/
+click_at,linkText,Sign in,
+click_at,id,sign-in__email,
+enter_text,id,sign-in__email,alyashelya+f@gmail.com
+click_at,id,sign-in__password,
+enter_text,id,sign-in__password,Test1
+click_at,css,.form__button,
+verify_existing,css,.alert__inner,
+close_browser
+---- LOGIN WITH EMPTY PASS 
+open_browser,chrome
+open_url,,,http://127.0.0.1:8080/
+click_at,linkText,Sign in,
+click_at,id,sign-in__email,
+enter_text,id,sign-in__email,alyashelya+f@gmail.com
+click_at,css,.form__button,
+verify_existing,css,.form__feedback,
+close_browser
+---- REGISTRATION
+open_browser,chrome
+open_url,,,http://127.0.0.1:8080/
+click_at,css,.hero__button,
+click_at,id,sign-up__first-name,
+enter_text,id,sign-up__first-name,Test
+click_at,id,sign-up__last-name,
+enter_text,id,sign-up__last-name,Testiuk
+click_at,id,sign-up__email,
+enter_text,id,sign-up__email,alyashelya+xvv@gmail.com
+click_at,id,sign-up__password,
+enter_text,id,sign-up__password,Test19test!
+click_at,id,sign-up__password,
+enter_text,id,sign-up__confirm-password,Test19test!
+click_at,css,.form__button,
+click_at,css,.alert__button,
+verify_existing,linkText,New post,
+close_browser
