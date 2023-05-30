@@ -32,7 +32,8 @@ public class ErrorBag {
     }
 
     public Map<String, Map<String, String>> getStorage() {
-        return storage;
+        Map<String, Map<String, String>> MapClone = new HashMap<>(storage);
+        return MapClone;
     }
 
     @Override
