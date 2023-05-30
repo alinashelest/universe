@@ -106,6 +106,67 @@
       <version>3.13.0</version>
       <scope>test</scope>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java8 -->
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-java8</artifactId>
+      <version>7.12.0</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-gherkin -->
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-gherkin</artifactId>
+      <version>7.12.0</version>
+    </dependency>
+    <dependency>
+      <groupId>info.cukes</groupId>
+      <artifactId>cucumber-java</artifactId>
+      <version>1.0.2</version>
+      <scope>test</scope>
+    </dependency>
+      <dependency>
+          <groupId>org.seleniumhq.selenium</groupId>
+          <artifactId>selenium-api</artifactId>
+          <version>4.9.1</version>
+          <scope>compile</scope>
+      </dependency>
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-chrome-driver</artifactId>
+      <version>4.9.1</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.github.bonigarcia</groupId>
+      <artifactId>webdrivermanager</artifactId>
+      <version>5.0.3</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-firefox-driver</artifactId>
+      <version>4.9.1</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>  <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-java8</artifactId>  <version>7.12.0</version>
+    </dependency><!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-gherkin -->
+    <dependency>  <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-gherkin</artifactId>  <version>7.12.0</version>
+    </dependency><dependency>
+    <groupId>info.cukes</groupId>  <artifactId>cucumber-java</artifactId>
+    <version>1.0.2</version>
+    <scope>test</scope></dependency>
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-testng</artifactId>
+      <version>[7.9.0,)</version>
+    </dependency>
+    <dependency>
+    <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-java</artifactId>
+    <version>[7.9.0,)</version>
+    </dependency>
   </dependencies>
 
   <build>
@@ -125,10 +186,7 @@
           <artifactId>maven-compiler-plugin</artifactId>
           <version>3.8.0</version>
         </plugin>
-        <plugin>
-          <artifactId>maven-surefire-plugin</artifactId>
-          <version>2.22.1</version>
-        </plugin>
+
         <plugin>
           <artifactId>maven-install-plugin</artifactId>
           <version>2.5.2</version>
@@ -147,6 +205,7 @@
           <version>3.0.0</version>
         </plugin>
       </plugins>
+
     </pluginManagement>
 
     <plugins>
@@ -182,6 +241,7 @@
           </execution>
         </executions>
       </plugin>
+
     </plugins>
   </build>
 </project>
